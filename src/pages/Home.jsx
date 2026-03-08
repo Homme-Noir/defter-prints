@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container hero-content py-5">
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <h1 className="hero-headline fw-normal mb-3">{hero.headline}</h1>
+              <h1 className="hero-headline mb-3">{hero.headline}</h1>
               <p className="lead mb-3" style={{ fontSize: "var(--text-xl)" }}>{hero.subhead}</p>
               <p className="mb-3">{hero.body}</p>
               {hero.ctaLabel && <p className="mb-2 small text-white text-opacity-90">{hero.ctaLabel}</p>}
@@ -41,6 +41,7 @@ export default function Home() {
       <section className="py-5 bg-subtle">
         <div className="container">
           <div className="section-header mb-5">
+            <p className="section-label mb-0">Why us</p>
             <h2>Why Choose Defter Prints</h2>
           </div>
           <p className="text-center text-muted mb-5">
@@ -66,6 +67,7 @@ export default function Home() {
       <section className="py-5">
         <div className="container">
           <div className="section-header mb-4">
+            <p className="section-label mb-0">Who we are</p>
             <h2>About Us</h2>
           </div>
           <h3 className="h5 text-center mb-3">Who We Are</h3>
@@ -88,6 +90,7 @@ export default function Home() {
       <section className="py-5 bg-subtle">
         <div className="container">
           <div className="section-header mb-5">
+            <p className="section-label mb-0">What we offer</p>
             <h2>Our Services</h2>
           </div>
           <div className="row g-4">
@@ -114,6 +117,7 @@ export default function Home() {
       <section className="py-5 bg-subtle">
         <div className="container">
           <div className="section-header mb-5">
+            <p className="section-label mb-0">How we work</p>
             <h2>Our Process</h2>
           </div>
           <div className="process-steps row g-4 justify-content-center">
@@ -134,6 +138,7 @@ export default function Home() {
       <section className="py-5">
         <div className="container">
           <div className="section-header mb-4">
+            <p className="section-label mb-0">Our clients</p>
             <h2>Industries We Serve</h2>
           </div>
           <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-3 mb-0">
@@ -148,6 +153,7 @@ export default function Home() {
       <section className="py-5 bg-subtle">
         <div className="container">
           <div className="section-header mb-5">
+            <p className="section-label mb-0">Reviews</p>
             <h2>{testimonialsSectionTitle}</h2>
           </div>
           <div className="row g-4">
