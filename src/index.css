@@ -387,22 +387,6 @@ section {
   gap: 2rem;
   position: relative;
 }
-@media (min-width: 768px) {
-  .process-steps::before {
-    content: "";
-    position: absolute;
-    top: 1.75rem;
-    left: 15%;
-    right: 15%;
-    height: 2px;
-    background: linear-gradient(
-      to right,
-      var(--color-accent),
-      var(--color-neutral-400)
-    );
-    z-index: 0;
-  }
-}
 .process-step {
   position: relative;
   z-index: 1;

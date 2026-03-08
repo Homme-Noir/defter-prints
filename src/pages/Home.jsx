@@ -76,9 +76,11 @@ export default function Home() {
           <p className="text-center mb-4">
             <strong>Our Vision:</strong> {about.vision}
           </p>
-          <Link to="/about" className="d-inline-block btn btn-outline-primary">
-            Learn more
-          </Link>
+          <div className="text-center">
+            <Link to="/about" className="btn btn-outline-primary">
+              Learn more
+            </Link>
+          </div>
         </div>
       </section>
 
