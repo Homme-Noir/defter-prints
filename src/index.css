@@ -249,15 +249,36 @@ section {
   background-color: var(--color-bg-subtle) !important;
 }
 
-/* Hero with gradient and radial glow */
+/* Dark section – testimonials, etc. + subtle concentric circles */
+.bg-dark-section {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 25%),
+    radial-gradient(circle at 80% 20%, transparent 0%, transparent 42%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 55%),
+    var(--color-dark);
+  color: var(--color-white);
+}
+.section-header-light .section-label,
+.section-label-light {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.section-header-light h2::after {
+  background: var(--color-accent);
+}
+
+/* Hero with gradient, radial glow, and subtle concentric circles */
 .hero-gradient {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-dark) 0%,
-    var(--color-dark) 50%,
-    var(--color-primary-dark) 100%
-  );
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 70% 30%, transparent 0%, transparent 28%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 38%),
+    linear-gradient(
+      135deg,
+      var(--color-primary-dark) 0%,
+      var(--color-dark) 50%,
+      var(--color-primary-dark) 100%
+    );
 }
 .hero-gradient::before {
   content: "";
@@ -310,6 +331,42 @@ section {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+}
+
+/* Hero headline accent span */
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Hero sidebar – stacked service blocks */
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hero-sidebar-block {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background var(--transition);
+}
+.hero-sidebar-block:last-child {
+  border-bottom: none;
+}
+.hero-sidebar-block:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+.hero-sidebar-block-accent {
+  background: oklch(70% 0.12 249 / 0.6);
+}
+.hero-sidebar-block-accent:hover {
+  background: oklch(70% 0.12 249 / 0.75);
 }
 
 @keyframes heroFadeIn {
@@ -372,6 +429,34 @@ section {
   outline: none;
 }
 
+/* Why Choose – icons and vertical dividers */
+.why-choose-icon {
+  color: var(--color-accent);
+}
+.why-choose-icon svg {
+  display: block;
+}
+.why-choose-row {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .why-choose-col:nth-child(3n + 1):not(:last-child),
+  .why-choose-col:nth-child(3n + 2):not(:last-child) {
+    position: relative;
+  }
+  .why-choose-col:nth-child(3n + 1)::after,
+  .why-choose-col:nth-child(3n + 2)::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: -0.75rem;
+    width: 1px;
+    height: 70%;
+    background: linear-gradient(to bottom, transparent, var(--color-accent) 10%, var(--color-accent) 90%, transparent);
+    opacity: 0.4;
+  }
+}
+
 .card-hover {
   transition: box-shadow var(--transition), transform var(--transition);
   border-radius: var(--radius);
@@ -400,6 +485,17 @@ section {
   color: inherit;
 }
 
+/* Service cards on dark section */
+.card-dark {
+  background: rgba(255, 255, 255, 0.08);
+}
+.card-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.card-link-dark:hover {
+  color: inherit;
+}
+
 /* Process steps with connecting line on desktop */
 .process-steps {
   display: flex;
@@ -414,6 +510,13 @@ section {
   text-align: center;
 }
 
+.process-step-icon {
+  color: var(--color-accent);
+}
+.process-step-icon svg {
+  display: block;
+  margin: 0 auto;
+}
 .process-step-circle {
   width: 3.5rem;
   height: 3.5rem;
@@ -451,6 +554,29 @@ section {
 }
 .testimonial-card:hover {
   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.08);
+}
+
+/* Testimonial card – dark variant with avatar */
+.testimonial-card-dark {
+  border-left: 4px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+.testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--text-lg);
 }
 
 /* Social icon placeholders */
