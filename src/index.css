@@ -2,7 +2,7 @@
 
 /* Brand overrides */
 .bg-primary {
-  background-color: var(--color-primary) !important;
+  background-color: var(--color-dark) !important;
 }
 .btn {
   border-radius: 2rem;
@@ -14,12 +14,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #e55a2b 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, oklch(60% 0.14 249) 100%);
   border: none;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, #e55a2b 0%, var(--color-accent) 100%);
-  box-shadow: 0 4px 12px rgba(196, 92, 38, 0.4);
+  background: linear-gradient(135deg, oklch(60% 0.14 249) 0%, var(--color-accent) 100%);
+  box-shadow: 0 4px 12px oklch(70% 0.12 249 / 0.4);
 }
 .btn-outline-light:hover {
   color: var(--color-primary);
@@ -33,25 +33,27 @@
 }
 .form-control:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(196, 92, 38, 0.2);
+  box-shadow: 0 0 0 3px oklch(70% 0.12 249 / 0.2);
 }
 
 :root {
-  /* Color system – refined palette */
-  --color-primary: #1a365d;
-  --color-primary-warm: #1e3a5f;
-  --color-primary-light: #2c5282;
-  --color-accent: #c45c26;
-  --color-accent-hover: #a04a1f;
-  --color-neutral-900: #1a202c;
-  --color-neutral-700: #4a5568;
-  --color-neutral-500: #6b7280;
-  --color-neutral-400: #9ca3af;
-  --color-neutral-100: #f7fafc;
-  --color-white: #ffffff;
-  --color-bg-subtle: #faf9f7;
-  --color-footer: #1a1f2e;
-  --color-dark: #1a1a1a;
+  /* Color system – oklch palette */
+  --color-text: oklch(19.12% 0.040 124.88);
+  --color-background: oklch(98.97% 0.018 123.96);
+  --color-primary: oklch(85.39% 0.208 128.00);
+  --color-secondary: oklch(89.93% 0.096 195.58);
+  --color-accent: oklch(70.83% 0.126 249.71);
+  /* Derived */
+  --color-primary-dark: oklch(45% 0.15 128);
+  --color-neutral-900: var(--color-text);
+  --color-neutral-700: oklch(45% 0.04 124);
+  --color-neutral-500: oklch(55% 0.03 124);
+  --color-neutral-400: oklch(65% 0.03 124);
+  --color-neutral-100: var(--color-background);
+  --color-white: oklch(100% 0 0);
+  --color-bg-subtle: oklch(96% 0.015 124);
+  --color-footer: oklch(25% 0.04 249);
+  --color-dark: oklch(25% 0.06 249);
   /* Typography */
   --font-heading: "Ramabhadra", sans-serif;
   --font-body: "Ramabhadra", sans-serif;
@@ -92,8 +94,8 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-neutral-900);
-  background-color: var(--color-white);
+  color: var(--color-text);
+  background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -252,9 +254,9 @@ section {
   position: relative;
   background: linear-gradient(
     135deg,
-    var(--color-primary) 0%,
+    var(--color-primary-dark) 0%,
     var(--color-dark) 50%,
-    var(--color-primary) 100%
+    var(--color-primary-dark) 100%
   );
 }
 .hero-gradient::before {
