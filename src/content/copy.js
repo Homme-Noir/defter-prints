@@ -1,15 +1,50 @@
 /**
  * Site copy – aligned with Defter Prints Word document.
- * Placeholders to replace later: contact (phone, email, address), social URLs (in SocialLinks or config),
+ * Placeholders to replace later: contact (phone, email, address), social URLs (see `socialLinks`),
  * testimonial attribution/real quotes, optional hero image.
  */
 
+/** Anchor-based navigation (single-page layout) */
 export const navLinks = [
-  { path: '/', label: 'Home', end: true },
-  { path: '/about', label: 'About', end: false },
-  { path: '/services', label: 'Services', end: false },
-  { path: '/contact', label: 'Contact', end: false },
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#process', label: 'Process' },
+  { href: '#contact', label: 'Contact' },
 ]
+
+/** Footer quick links (explicit hashes; avoids broken auto-generated anchors) */
+export const footerQuickLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About Us' },
+  { href: '#process', label: 'Our Process' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#contact', label: 'Contact' },
+]
+
+export const footerServiceLinks = [
+  { href: '#services', label: 'Corporate Branding' },
+  { href: '#services', label: 'Digital Printing' },
+  { href: '#services', label: 'Apparel & Textile' },
+  { href: '#services', label: 'Promotional Products' },
+  { href: '#services', label: 'Signage & Banners' },
+]
+
+export const footerLegalLinks = [
+  { href: '#', label: 'Privacy Policy' },
+  { href: '#', label: 'Terms of Service' },
+]
+
+export const whyChooseIntro =
+  "At Defter Prints, we don't just print—we help brands communicate with clarity, consistency, and impact. Here's why businesses trust us:"
+
+export const servicesSectionIntro =
+  'Comprehensive printing and branding solutions tailored to elevate your business identity.'
+
+export const processSectionIntro =
+    'A streamlined approach to bring your ideas to life, from initial concept to final delivery.'
+
+export const industriesSectionIntro = 'Delivering excellence across diverse sectors.'
 
 export const contactForm = {
   submitLabel: 'Send via Email',
@@ -170,24 +205,43 @@ export const industries = [
 ]
 
 export const testimonials = [
-  { quote: '"Defter Prints delivered exceptional quality and exceeded our expectations."', attribution: '— Tripleo Consulting' },
-  { quote: '"Professional service, great attention to detail, and timely delivery."', attribution: '— Pathrise Academy' },
+  {
+    quote: 'Defter Prints delivered exceptional quality and exceeded our expectations.',
+    author: 'Tripleo Consulting',
+    role: 'Corporate Client',
+  },
+  {
+    quote: 'Professional service, great attention to detail, and timely delivery.',
+    author: 'Pathrise Academy',
+    role: 'Educational Institution',
+  },
 ]
-export const testimonialsSectionTitle = 'Testimonials (Placeholder)'
+export const testimonialsSectionTitle = 'What Our Clients Say'
 
 export const ctaSection = {
-  headline: 'Ready to bring your ideas to life?',
+  headline: 'Ready to Bring Your Ideas to Life?',
   body: 'Partner with Defter Prints for quality printing and branding solutions you can trust.',
   ctaQuote: 'Request a Quote',
   ctaContact: 'Contact Us Today',
 }
 
+export const contactIntro =
+  "Have a project in mind? Reach out to us today and let's discuss how we can bring your brand to life."
+
+/** Replace `#` with real profile URLs when available */
+export const socialLinks = [
+  { label: 'Facebook', href: '#' },
+  { label: 'Twitter', href: '#' },
+  { label: 'Instagram', href: '#' },
+  { label: 'LinkedIn', href: '#' },
+]
+
 export const contact = {
   heading: 'Contact Us',
   companyName: 'Defter Prints',
-  phoneLabel: 'Phone:',
-  emailLabel: 'Email:',
-  addressLabel: 'Address:',
+  phoneLabel: 'Phone',
+  emailLabel: 'Email',
+  addressLabel: 'Address',
   phone: '',
   email: '',
   address: '',
